@@ -1,3 +1,5 @@
+# general
+
 node_modules
 bower_components
 dist
@@ -5,3 +7,17 @@ dist
 .tmp
 .sass-cache
 .DS_Store
+
+# wordpress
+/*
+!.gitignore
+!www/
+
+www/*
+!www/wordpress/
+www/wordpress/*
+!www/wordpress/wp-content/
+www/wordpress/wp-content/*
+!www/wordpress/wp-content/themes/
+www/wordpress/wp-content/themes/*
+!www/wordpress/wp-content/themes/ettisberger/
