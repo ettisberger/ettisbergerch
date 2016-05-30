@@ -1,0 +1,115 @@
+/************************************************************/
+/* VARIABLES */
+/************************************************************/
+
+$aet-tablet-min-width: 768px;
+$aet-small-desktop-min-width: 992px;
+$aet-large-desktop-min-width: 1200px;
+
+
+/************************************************************/
+/* MIXINS */
+/************************************************************/
+
+@mixin aet-phone {
+  @media (max-width: #{$aet-tablet-min-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin aet-gt-phone {
+  @media (min-width: #{$aet-tablet-min-width}) {
+    @content;
+  }
+}
+
+@mixin aet-st-tablet {
+  @media (max-width: #{$aet-small-desktop-min-width - 1px}) {
+    @content;
+  }
+}
+
+
+@mixin aet-tablet {
+  @media (min-width: #{$aet-tablet-min-width}) and (max-width: #{$aet-small-desktop-min-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin aet-gt-tablet {
+  @media (min-width: #{$aet-small-desktop-min-width}) {
+    @content;
+  }
+}
+
+@mixin aet-st-small-desktop {
+  @media (max-width: #{$aet-large-desktop-min-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin aet-small-desktop {
+  @media (min-width: #{$aet-small-desktop-min-width}) and (max-width: #{$aet-large-desktop-min-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin aet-large-desktop {
+  @media (min-width: #{$aet-large-desktop-min-width}) {
+    @content;
+  }
+}
+
+@mixin aet-touch {
+  @include -at-root('.touch '&){
+    @content;
+  }
+}
+
+@mixin aet-no-touch {
+  @include -at-root('.no-touch '&){
+    @content;
+  }
+}
+
+@mixin aet-flexbox {
+  @include -at-root('.flexbox '&){
+    @content;
+  }
+}
+
+@mixin aet-no-flexbox {
+  @include -at-root('.no-flexbox '&){
+    @content;
+  }
+}
+
+@mixin aet-even {
+  @include -at-root('.aet-even '&){
+    @content;
+  }
+}
+
+@mixin aet-odd {
+  @include -at-root('.aet-odd '&){
+    @content;
+  }
+}
+
+@mixin -at-root($selector) {
+  @at-root {
+    #{$selector} {
+      @content;
+    }
+  }
+}
+
+@mixin aet-clearfix {
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}

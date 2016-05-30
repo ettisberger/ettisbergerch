@@ -1,0 +1,54 @@
+@import "../common/base";
+
+/************************************************************/
+/* CLASSES */
+/************************************************************/
+
+.aet-overflow-hidden {
+  overflow: hidden;
+}
+
+.aet-hide-phone {
+  @include aet-phone {
+    display: none;
+  }
+}
+
+.aet-hide-tablet {
+  @include aet-tablet {
+    display: none;
+  }
+}
+
+.aet-hide-small-desktop {
+  @include aet-small-desktop {
+    display: none;
+  }
+}
+
+.aet-hide-large-desktop {
+  @include aet-large-desktop {
+    display: none;
+  }
+}
+
+.aet-is-hidden {
+  visibility: hidden;
+}
+
+%aet-pointer {
+  cursor: pointer;
+}
+
+.aet-hide {
+  &-odd {
+    @include aet-odd {
+      display: none;
+    }
+  }
+  &-even {
+    @include aet-even {
+      display: none;
+    }
+  }
+}

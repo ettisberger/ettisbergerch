@@ -1,0 +1,48 @@
+@import "../common/base";
+
+.aet-main {
+  height: 100%;
+}
+
+.aet-section {
+  padding: 7rem 0 8rem 0;
+  overflow: hidden;
+
+  @include aet-st-small-desktop {
+    padding: 4rem 0;
+  }
+
+  h2 {
+    margin-bottom: 1.5em;
+    text-align: center;
+    color: $aet-color-black;
+    &:first-child {
+      margin-top: #{-($aet-line-height-headings - 1)/2};
+    }
+  }
+}
+
+.aet-inlay {
+  margin: 0 auto;
+
+  @include aet-large-desktop {
+    width: 1200px;
+    &.aet-inlay-full {
+      width: 90%;
+      min-width: 1200px;
+      margin: 0 auto;
+    }
+  }
+
+  @include aet-small-desktop {
+    width: 970px;
+  }
+
+  @include aet-tablet {
+    padding: 0 20px;
+  }
+
+  @include aet-phone {
+    padding: 0 20px;
+  }
+}

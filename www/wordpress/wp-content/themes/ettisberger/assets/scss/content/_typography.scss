@@ -1,0 +1,142 @@
+@import "../common/base";
+
+/************************************************************/
+/* CLASSES */
+/************************************************************/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  color: $aet-color-black;
+  line-height: 1.0rem;
+}
+
+body {
+  @include aet-gt-phone {
+    font-size: 18px;
+  }
+  @include aet-phone {
+    font-size: 17px;
+  }
+}
+
+p, span, li {
+  line-height: $aet-line-height-body;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+@include aet-large-desktop {
+  h1, %aet-heading-1 {
+    font-size: 7rem;
+  }
+
+  h2, %aet-heading-2 {
+    font-size: 3.5rem;
+  }
+
+  h3, %aet-heading-3 {
+    font-size: 2.25rem;
+  }
+
+  h4, %aet-heading-4 {
+    font-size: 1.50rem;
+  }
+
+  h5, %aet-heading-5 {
+    font-size: 1.25rem;
+  }
+}
+
+@include aet-small-desktop {
+  h1, %aet-heading-1 {
+    font-size: 5.0rem;
+  }
+
+  h2, %aet-heading-2 {
+    font-size: 3.25rem;
+  }
+
+  h3, %aet-heading-3 {
+    font-size: 2.00rem;
+  }
+
+  h4, %aet-heading-4 {
+    font-size: 1.35rem;
+  }
+
+  h5, %aet-heading-5 {
+    font-size: 1.10rem;
+  }
+}
+
+@include aet-tablet {
+  h1, %aet-heading-1 {
+    font-size: 4.5rem;
+  }
+
+  h2, %aet-heading-2 {
+    font-size: 2.75rem;
+  }
+
+  h3, %aet-heading-3 {
+    font-size: 1.8rem;
+  }
+
+  h4, %aet-heading-4 {
+    font-size: 1.5rem;
+  }
+
+  h5, %aet-heading-5 {
+    font-size: 1.0rem;
+  }
+}
+
+
+@include aet-phone {
+  h1, %aet-heading-1 {
+    font-size: 2.25rem;
+  }
+
+  h2, %aet-heading-2 {
+    font-size: 2.0rem;
+  }
+
+  h3, %aet-heading-3 {
+    font-size: 1.50rem;
+  }
+
+  h4, %aet-heading-4 {
+    font-size: 1.30rem;
+  }
+
+  h5, %aet-heading-5 {
+    font-size: 1.0rem;
+  }
+}
+
+h1, h2, h3, h4, h5, %aet-heading-1, %aet-heading-2, %aet-heading-3, %aet-heading-4, %aet-heading-5 {
+  margin-top: 1.20em;
+  margin-bottom: 0.80em;
+  line-height: $aet-line-height-headings;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+a {
+  color: $aet-color-black;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

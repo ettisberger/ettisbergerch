@@ -1,0 +1,106 @@
+@import "../common/base";
+
+$columnWidths: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+$growFactors: 0, 1, 2, 3, 4;
+$orderPositions: 1, 2, 3, 4, 5;
+
+/************************************************************/
+/* MIXINS */
+/************************************************************/
+@mixin aet-column($suffix:"") {
+  @each $columnWidth in $columnWidths {
+    .aet-column#{$suffix}-#{$columnWidth} {
+      flex: #{(($columnWidth/12)*100)+'%'};
+      max-width: #{(($columnWidth/12)*100)+'%'};
+      display: flex;
+    }
+  }
+}
+
+@mixin aet-grow($suffix:"") {
+  @each $growFactor in $growFactors {
+    .aet-grow#{$suffix}-#{$growFactor} {
+      flex-grow: $growFactor;
+    }
+  }
+}
+
+@mixin aet-order($suffix:"") {
+  @each $orderPosition in $orderPositions {
+    .aet-order#{$suffix}-#{$orderPosition} {
+      order: $orderPosition;
+    }
+  }
+}
+
+@mixin aet-hide($suffix:"") {
+  .aet-hide#{$suffix} {
+    display: none;
+  }
+}
+
+/************************************************************/
+/* CLASSES */
+/************************************************************/
+@include aet-flexbox {
+  .aet-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+
+    &.aet-row-vcenter {
+      align-items: center;
+    }
+
+    &.aet-row-hcenter {
+      justify-content: center;
+    }
+
+    &.aet-row-small-padding {
+      margin: -0.5rem -1rem;
+      *[class^="aet-column-"] {
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    &.aet-row-padding {
+      margin: -1rem;
+      *[class^="aet-column-"] {
+        padding: 1rem;
+      }
+    }
+  }
+
+  @include aet-column;
+  @include aet-grow;
+  @include aet-order;
+  @include aet-hide;
+
+  @include aet-phone {
+    @include aet-column('-phone');
+    @include aet-grow('-phone');
+    @include aet-order('-phone');
+    @include aet-hide('-phone');
+  }
+
+  @include aet-tablet {
+    @include aet-column('-tablet');
+    @include aet-grow('-tablet');
+    @include aet-order('-tablet');
+    @include aet-hide('-tablet');
+  }
+
+  @include aet-small-desktop {
+    @include aet-column('-small-desktop');
+    @include aet-grow('-small-desktop');
+    @include aet-order('-small-desktop');
+    @include aet-hide('-small-desktop');
+  }
+
+  @include aet-large-desktop {
+    @include aet-column('-large-desktop');
+    @include aet-grow('-large-desktop');
+    @include aet-order('-large-desktop');
+    @include aet-hide('-large-desktop');
+  }
+}
