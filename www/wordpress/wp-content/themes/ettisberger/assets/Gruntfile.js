@@ -11,16 +11,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-        bower_concat: {
-            all: {
-                dest: '.tmp/vendor.js',
-                cssDest: '.tmp/vendor.css',
-
-                bowerOptions: {
-                    relative: false
-                }
-            }
-        },
         concat: {
             all: {
                 src: ['javascript/**/*.js'],
@@ -48,7 +38,6 @@ module.exports = function(grunt) {
                     mangle: true
                 },
                 files: {
-                    '.tmp/vendor.js': ['.tmp/vendor.js'],
                     '.tmp/ettisberger.js': ['.tmp/ettisberger.js']
                 }
             }
@@ -91,7 +80,6 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.loadNpmTasks('grunt-bower-concat');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-copy');
@@ -101,6 +89,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', ['sass:all', 'bower_concat:all', 'postcss:all', 'concat:all', 'copy:all', 'clean:all']);
-    grunt.registerTask('dist', ['sass:all', 'bower_concat:all', 'postcss:all', 'concat:all', 'uglify:dist', 'cssmin:dist', 'copy:all', 'clean:all']);
+    grunt.registerTask('default', ['sass:all', 'postcss:all', 'concat:all', 'copy:all', 'clean:all']);
+    grunt.registerTask('dist', ['sass:all', 'postcss:all', 'concat:all', 'uglify:dist', 'cssmin:dist', 'copy:all', 'clean:all']);
 };
