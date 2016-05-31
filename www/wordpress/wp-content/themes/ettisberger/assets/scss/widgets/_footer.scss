@@ -1,1 +1,12 @@
 @import "../common/base";
+
+.aet-footer {
+  height: 15rem;
+  padding: 5rem 0;
+  background-color: $aet-color-dark-blue;
+  color: $aet-color-white;
+
+  &-box {
+    justify-content: center;
+  }
+}

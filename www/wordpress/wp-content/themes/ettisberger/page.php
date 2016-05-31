@@ -5,10 +5,12 @@
 
 <?php get_header(); ?>
 
-<div class="aet-inlay">
-    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <?php the_content(); ?>
-    <?php endwhile; endif; ?>
-</div>
+<section class="aet-section aet-odd">
+    <div class="aet-inlay">
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <?php the_content(); ?>
+        <?php endwhile; endif; ?>
+    </div>
+</section>
 
 <?php get_footer(); ?>

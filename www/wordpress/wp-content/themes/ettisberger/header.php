@@ -12,4 +12,4 @@
 </head>
 <body>
     <?php include(__DIR__ . '/includes/partials/header.partial.php'); ?>
-    <main>
+    <main class="aet-main">

@@ -3,13 +3,13 @@
   "devDependencies": {
     "autoprefixer": "*",
     "grunt": "*",
-    "grunt-contrib-concat": "*",
     "grunt-contrib-clean": "*",
+    "grunt-contrib-concat": "*",
     "grunt-contrib-copy": "*",
     "grunt-contrib-cssmin": "*",
     "grunt-contrib-sass": "*",
-    "grunt-contrib-watch": "*",
     "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
     "grunt-postcss": "*"
   }
 }

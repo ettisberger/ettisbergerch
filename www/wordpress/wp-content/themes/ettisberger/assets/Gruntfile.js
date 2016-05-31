@@ -13,7 +13,7 @@ module.exports = function(grunt) {
         },
         concat: {
             all: {
-                src: ['javascript/**/*.js'],
+                src: ['javascript/*.js'],
                 dest: '.tmp/ettisberger.js'
             }
         },

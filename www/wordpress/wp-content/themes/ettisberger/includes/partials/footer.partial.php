@@ -1,7 +1,8 @@
-<?php
-/**
- * Created by IntelliJ IDEA.
- * User: andyettisberger
- * Date: 30/05/16
- * Time: 20:59
- */
+<footer class="aet-footer">
+    <div class="aet-inlay">
+        <div class="aet-row">
+            <div class="aet-footer-box aet-column-6">Left</div>
+            <div class="aet-footer-box aet-column-6">Right</div>
+        </div>
+    </div>
+</footer>

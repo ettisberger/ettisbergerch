@@ -275,6 +275,14 @@ ul {
   padding: 7rem 0 8rem 0;
   overflow: hidden;
 }
+.aet-section.aet-odd {
+  background-color: #FFFFFE;
+  color: #333;
+}
+.aet-section.aet-even {
+  background-color: #EDEDED;
+  color: #333;
+}
 @media (max-width: 1199px) {
   .aet-section {
     padding: 4rem 0;
@@ -283,7 +291,6 @@ ul {
 .aet-section h2 {
   margin-bottom: 1.5em;
   text-align: center;
-  color: #333;
 }
 .aet-section h2:first-child {
   margin-top: -0.15em;
@@ -1047,3 +1054,13 @@ ul {
 /************************************************************/
 /* MIXINS */
 /************************************************************/
+.aet-footer {
+  height: 15rem;
+  padding: 5rem 0;
+  background-color: #000033;
+  color: #FFFFFE;
+}
+.aet-footer-box {
+  -ms-flex-pack: center;
+      justify-content: center;
+}

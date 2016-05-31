@@ -8,6 +8,16 @@
   padding: 7rem 0 8rem 0;
   overflow: hidden;
 
+  &.aet-odd {
+    background-color: $aet-color-white;
+    color: $aet-color-black;
+  }
+
+  &.aet-even {
+    background-color: $aet-color-grey;
+    color: $aet-color-black;
+  }
+
   @include aet-st-small-desktop {
     padding: 4rem 0;
   }
@@ -15,7 +25,7 @@
   h2 {
     margin-bottom: 1.5em;
     text-align: center;
-    color: $aet-color-black;
+
     &:first-child {
       margin-top: #{-($aet-line-height-headings - 1)/2};
     }
