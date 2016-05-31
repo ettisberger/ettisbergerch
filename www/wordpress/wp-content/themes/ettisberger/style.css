@@ -69,7 +69,7 @@ p:last-of-type {
 }
 
 @media (min-width: 1200px) {
-  h1 {
+  h1, .aet-main-header-title {
     font-size: 7rem;
   }
 
@@ -90,7 +90,7 @@ p:last-of-type {
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  h1 {
+  h1, .aet-main-header-title {
     font-size: 5.0rem;
   }
 
@@ -111,7 +111,7 @@ p:last-of-type {
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  h1 {
+  h1, .aet-main-header-title {
     font-size: 4.5rem;
   }
 
@@ -132,7 +132,7 @@ p:last-of-type {
   }
 }
 @media (max-width: 767px) {
-  h1 {
+  h1, .aet-main-header-title {
     font-size: 2.25rem;
   }
 
@@ -152,7 +152,7 @@ p:last-of-type {
     font-size: 1.0rem;
   }
 }
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, .aet-main-header-title {
   margin-top: 1.20em;
   margin-bottom: 0.80em;
   line-height: 1.3em;
@@ -1020,6 +1020,21 @@ ul {
 /************************************************************/
 /* MIXINS */
 /************************************************************/
+.aet-main-header {
+  height: 20rem;
+  border-bottom: 10px solid #0066CC;
+  background-image: url("images/header_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+}
+.aet-main-header-title {
+  margin: 0;
+  font-family: Jura;
+  color: #EDEDED;
+}
+
 /************************************************************/
 /* VARIABLES */
 /************************************************************/

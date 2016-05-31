@@ -5,14 +5,10 @@
 
 <?php get_header(); ?>
 
-<?php include(__DIR__ . '/includes/partials/pagedata.partial.php'); ?>
-<!---->
-<!--<section id="yoen-first-section" class="yoen-section yoen-odd">-->
-<!--    <div class="yoen-inlay">-->
-<!--        --><?php //if (have_posts()) : while (have_posts()) : the_post(); ?>
-<!--            --><?php //the_content(); ?>
-<!--        --><?php //endwhile; endif; ?>
-<!--    </div>-->
-<!--</section>-->
+<div class="aet-inlay">
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+        <?php the_content(); ?>
+    <?php endwhile; endif; ?>
+</div>
 
 <?php get_footer(); ?>
