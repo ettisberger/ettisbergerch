@@ -1015,6 +1015,15 @@ ul {
 /************************************************************/
 /* MIXINS */
 /************************************************************/
+.aet-contact-boxes {
+  padding: 2rem;
+}
+.aet-contact-boxes .aet-contact-box {
+  margin: 1rem;
+  padding: 150px 20px;
+  background-color: #0099FF;
+}
+
 /************************************************************/
 /* VARIABLES */
 /************************************************************/
@@ -1034,7 +1043,6 @@ ul {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.8;
 }
 .aet-main-header-title {
   margin: 0;

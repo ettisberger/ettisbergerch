@@ -15,6 +15,10 @@ class ShortcodeUtil
         return '</div></section><section class="aet-section ' . $oddEvenStyle . '"><div class="aet-inlay">';
     }
 
+    function renderContact(){
+        return $this->render('contact', null);
+    }
+
     private function render($partial, $params)
     {
         ob_start();
