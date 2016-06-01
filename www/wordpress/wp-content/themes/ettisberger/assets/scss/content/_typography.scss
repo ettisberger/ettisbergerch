@@ -35,6 +35,8 @@ p {
 
 @include aet-large-desktop {
   h1, %aet-heading-1 {
+    font-family: Maven Pro;
+
     font-size: 7rem;
   }
 
@@ -126,6 +128,7 @@ h1, h2, h3, h4, h5, %aet-heading-1, %aet-heading-2, %aet-heading-3, %aet-heading
   margin-top: 1.20em;
   margin-bottom: 0.80em;
   line-height: $aet-line-height-headings;
+  font-family: Maven Pro;
 }
 
 h1 {

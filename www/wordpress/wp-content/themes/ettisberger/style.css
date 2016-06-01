@@ -70,6 +70,7 @@ p:last-of-type {
 
 @media (min-width: 1200px) {
   h1, .aet-main-header-title {
+    font-family: Maven Pro;
     font-size: 7rem;
   }
 
@@ -85,7 +86,7 @@ p:last-of-type {
     font-size: 1.50rem;
   }
 
-  h5 {
+  h5, .aet-contact-boxes .aet-contact-box-title {
     font-size: 1.25rem;
   }
 }
@@ -106,7 +107,7 @@ p:last-of-type {
     font-size: 1.35rem;
   }
 
-  h5 {
+  h5, .aet-contact-boxes .aet-contact-box-title {
     font-size: 1.10rem;
   }
 }
@@ -127,7 +128,7 @@ p:last-of-type {
     font-size: 1.5rem;
   }
 
-  h5 {
+  h5, .aet-contact-boxes .aet-contact-box-title {
     font-size: 1.0rem;
   }
 }
@@ -148,14 +149,15 @@ p:last-of-type {
     font-size: 1.30rem;
   }
 
-  h5 {
+  h5, .aet-contact-boxes .aet-contact-box-title {
     font-size: 1.0rem;
   }
 }
-h1, h2, h3, h4, h5, .aet-main-header-title {
+h1, h2, h3, h4, h5, .aet-main-header-title, .aet-contact-boxes .aet-contact-box-title {
   margin-top: 1.20em;
   margin-bottom: 0.80em;
   line-height: 1.3em;
+  font-family: Maven Pro;
 }
 
 h1 {
@@ -1017,11 +1019,40 @@ ul {
 /************************************************************/
 .aet-contact-boxes {
   padding: 2rem;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 .aet-contact-boxes .aet-contact-box {
   margin: 1rem;
-  padding: 150px 20px;
   background-color: #0099FF;
+  box-shadow: 2px 2px 5px #333;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+.aet-contact-boxes .aet-contact-box a {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+.aet-contact-boxes .aet-contact-box a:hover {
+  text-decoration: none;
+  color: #0099FF;
+}
+.aet-contact-boxes .aet-contact-box:hover, .aet-contact-boxes .aet-contact-box:hover .aet-contact-box-title {
+  background-color: #333;
+  color: #0099FF;
+}
+.aet-contact-boxes .aet-contact-box-title {
+  background-color: #FFFFFE;
+  margin: 0;
+  padding: 1rem 0;
+  text-align: center;
+}
+.aet-contact-boxes .aet-contact-box-icon {
+  padding: 2rem;
+  margin: auto;
+  font-size: 10rem;
 }
 
 /************************************************************/
@@ -1046,7 +1077,6 @@ ul {
 }
 .aet-main-header-title {
   margin: 0;
-  font-family: Jura;
   color: #EDEDED;
 }
 

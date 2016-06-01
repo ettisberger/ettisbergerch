@@ -2,10 +2,41 @@
 
 .aet-contact-boxes {
   padding: 2rem;
+  justify-content: center;
 
   .aet-contact-box {
     margin: 1rem;
-    padding: 150px 20px;
     background-color: $aet-color-light-blue;
+    box-shadow: 2px 2px 5px $aet-color-black;
+    flex-direction: column;
+
+    a {
+      display: flex;
+      flex-direction: column;
+
+      &:hover {
+        text-decoration: none;
+        color: $aet-color-light-blue;
+      }
+    }
+
+    &:hover, &:hover .aet-contact-box-title {
+      background-color: $aet-color-black;
+      color: $aet-color-light-blue;
+    }
+
+    &-title {
+      @extend %aet-heading-5;
+      background-color: $aet-color-white;
+      margin: 0;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    &-icon {
+      padding: 2rem;
+      margin: auto;
+      font-size: 10rem;
+    }
   }
 }
