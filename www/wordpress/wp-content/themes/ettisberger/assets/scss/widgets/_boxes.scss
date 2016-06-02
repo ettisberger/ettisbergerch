@@ -7,7 +7,7 @@
   .aet-contact-box {
     margin: 1rem;
     background-color: $aet-color-light-blue;
-    box-shadow: 2px 2px 5px $aet-color-black;
+    box-shadow: 1px 1px 5px $aet-color-black;
     flex-direction: column;
 
     a {
@@ -36,7 +36,54 @@
     &-icon {
       padding: 2rem;
       margin: auto;
-      font-size: 10rem;
+      font-size: 8rem;
+    }
+  }
+}
+
+.aet-skill-boxes {
+  padding: 2rem;
+  justify-content: center;
+
+  .aet-skill-box {
+    margin: 1rem;
+    padding: 50px;
+    min-height: 10rem;
+    background-color: $aet-color-dark-blue;
+    //box-shadow: 2px 2px 5px $aet-color-black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    %text {
+      font-family: Maven Pro;
+      font-size: 1em;
+      line-height: 1em;
+    }
+
+    &-title {
+      display: block;
+      color: $aet-color-grey;
+      @extend %text;
+    }
+
+    &-rating {
+      display: none;
+      color: $aet-color-dark-blue;
+      @extend %text;
+    }
+
+    &:hover {
+      background-color: $aet-color-grey;
+      border: 1px solid $aet-color-dark-blue;
+    }
+
+    &:hover .aet-skill-box-rating {
+      display: block;
+    }
+
+    &:hover .aet-skill-box-title {
+      display: none;
     }
   }
 }

@@ -7,8 +7,7 @@
             $color = get_sub_field('color','option');
             $description = get_sub_field('description','option');
         ?>
-<!--        <a href="--><?php //echo $link;?><!--">-->
-            <div class="aet-contact-box aet-column-3">
+            <div class="aet-contact-box aet-column-3 slide-in">
                 <a href="<?php echo $link;?>">
                     <div class="aet-contact-box-icon">
                         <i class="fa fa-<?php echo $icon;?>"></i>
@@ -18,6 +17,5 @@
                     </div>
                 </a>
             </div>
-<!--        </a>-->
     <?php endwhile; ?>
 </div>

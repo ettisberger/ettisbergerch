@@ -26,6 +26,14 @@ class CustomFieldUtils {
             'parent_slug'	=> 'theme-general-settings'
         ));
 
+        acf_add_options_sub_page(array(
+            'page_title' 	=> 'Skills',
+            'menu_title'	=> 'Skills',
+            'menu_slug' 	=> 'theme-skills-settings',
+            'capability'	=> 'edit_posts',
+            'parent_slug'	=> 'theme-general-settings'
+        ));
+
         acf_add_options_page(array(
             'page_title' 	=> 'Layout',
             'menu_title'	=> 'Layout',

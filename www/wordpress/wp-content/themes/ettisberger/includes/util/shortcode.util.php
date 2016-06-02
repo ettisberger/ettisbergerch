@@ -19,6 +19,10 @@ class ShortcodeUtil
         return $this->render('contact', null);
     }
 
+    function renderSkills(){
+        return $this->render('skills', null);
+    }
+
     private function render($partial, $params)
     {
         ob_start();
