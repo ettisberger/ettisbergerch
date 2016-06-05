@@ -2,11 +2,25 @@
 
 .aet-footer {
   height: 15rem;
-  padding: 5rem 0;
+  padding: 3rem 0;
   background-color: $aet-color-dark-blue;
   color: $aet-color-white;
 
+  a {
+    color: $aet-color-grey;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   &-box {
-    justify-content: center;
+    @include aet-gt-phone {
+      justify-content: center;
+    }
+
+    @include aet-phone {
+      margin: 1rem 0;
+    }
   }
 }

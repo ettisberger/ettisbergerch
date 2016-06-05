@@ -8,6 +8,12 @@
   background-repeat: no-repeat;
   background-position: center;
 
+  @include aet-phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   &-title {
     @extend %aet-heading-1;
     margin: 0;

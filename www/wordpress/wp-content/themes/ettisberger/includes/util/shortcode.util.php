@@ -23,6 +23,10 @@ class ShortcodeUtil
         return $this->render('skills', null);
     }
 
+    function renderAboutMe(){
+        return $this->render('aboutme', null);
+    }
+
     private function render($partial, $params)
     {
         ob_start();

@@ -34,6 +34,14 @@ class CustomFieldUtils {
             'parent_slug'	=> 'theme-general-settings'
         ));
 
+        acf_add_options_sub_page(array(
+            'page_title' 	=> 'Über mich',
+            'menu_title'	=> 'Über mich',
+            'menu_slug' 	=> 'theme-aboutme-settings',
+            'capability'	=> 'edit_posts',
+            'parent_slug'	=> 'theme-general-settings'
+        ));
+
         acf_add_options_page(array(
             'page_title' 	=> 'Layout',
             'menu_title'	=> 'Layout',

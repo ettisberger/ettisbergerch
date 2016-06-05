@@ -39,8 +39,7 @@ ul {
 /* CLASSES */
 /************************************************************/
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
+  font-family: Maven Pro;
   color: #333;
   line-height: 1.0rem;
 }
@@ -82,7 +81,7 @@ p:last-of-type {
     font-size: 2.25rem;
   }
 
-  h4 {
+  h4, .aet-aboutme-boxes .aet-aboutme-box-title {
     font-size: 1.50rem;
   }
 
@@ -103,7 +102,7 @@ p:last-of-type {
     font-size: 2.00rem;
   }
 
-  h4 {
+  h4, .aet-aboutme-boxes .aet-aboutme-box-title {
     font-size: 1.35rem;
   }
 
@@ -124,7 +123,7 @@ p:last-of-type {
     font-size: 1.8rem;
   }
 
-  h4 {
+  h4, .aet-aboutme-boxes .aet-aboutme-box-title {
     font-size: 1.5rem;
   }
 
@@ -145,7 +144,7 @@ p:last-of-type {
     font-size: 1.50rem;
   }
 
-  h4 {
+  h4, .aet-aboutme-boxes .aet-aboutme-box-title {
     font-size: 1.30rem;
   }
 
@@ -153,11 +152,10 @@ p:last-of-type {
     font-size: 1.0rem;
   }
 }
-h1, h2, h3, h4, h5, .aet-main-header-title, .aet-contact-boxes .aet-contact-box-title {
+h1, h2, h3, h4, h5, .aet-main-header-title, .aet-aboutme-boxes .aet-aboutme-box-title, .aet-contact-boxes .aet-contact-box-title {
   margin-top: 1.20em;
   margin-bottom: 0.80em;
   line-height: 1.3em;
-  font-family: Maven Pro;
 }
 
 h1 {
@@ -254,7 +252,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 ul {
@@ -1044,8 +1042,7 @@ ul {
 }
 .aet-contact-boxes .aet-contact-box {
   margin: 1rem;
-  background-color: #0099FF;
-  box-shadow: 1px 1px 5px #333;
+  background-color: #0066CC;
   -ms-flex-direction: column;
       flex-direction: column;
 }
@@ -1057,11 +1054,11 @@ ul {
 }
 .aet-contact-boxes .aet-contact-box a:hover {
   text-decoration: none;
-  color: #0099FF;
+  color: #0066CC;
 }
 .aet-contact-boxes .aet-contact-box:hover, .aet-contact-boxes .aet-contact-box:hover .aet-contact-box-title {
   background-color: #333;
-  color: #0099FF;
+  color: #0066CC;
 }
 .aet-contact-boxes .aet-contact-box-title {
   background-color: #FFFFFE;
@@ -1071,8 +1068,8 @@ ul {
 }
 .aet-contact-boxes .aet-contact-box-icon {
   padding: 2rem;
-  margin: auto;
   font-size: 8rem;
+  text-align: center;
 }
 
 .aet-skill-boxes {
@@ -1084,7 +1081,7 @@ ul {
   margin: 1rem;
   padding: 50px;
   min-height: 10rem;
-  background-color: #000033;
+  background-color: #333;
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-align: center;
@@ -1106,14 +1103,45 @@ ul {
   color: #000033;
 }
 .aet-skill-boxes .aet-skill-box:hover {
-  background-color: #EDEDED;
-  border: 1px solid #000033;
+  background-color: #0066CC;
+  color: #0066CC;
 }
 .aet-skill-boxes .aet-skill-box:hover .aet-skill-box-rating {
   display: block;
 }
 .aet-skill-boxes .aet-skill-box:hover .aet-skill-box-title {
   display: none;
+}
+
+.aet-aboutme-boxes {
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+.aet-aboutme-boxes .aet-aboutme-box {
+  margin: 1rem;
+  padding: 1rem 0;
+  -ms-flex-align: center;
+      -ms-grid-row-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  background-color: #0066CC;
+  color: #EDEDED;
+}
+@media (min-width: 768px) {
+  .aet-aboutme-boxes .aet-aboutme-box:hover {
+    color: #333;
+  }
+}
+.aet-aboutme-boxes .aet-aboutme-box-title {
+  margin: 0 0 1rem 0;
+}
+.aet-aboutme-boxes .aet-aboutme-box-icon {
+  padding-bottom: 1rem;
+  font-size: 5rem;
+}
+.aet-aboutme-boxes .aet-aboutme-box-text {
+  text-align: center;
 }
 
 /************************************************************/
@@ -1136,6 +1164,16 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
 }
+@media (max-width: 767px) {
+  .aet-main-header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+}
 .aet-main-header-title {
   margin: 0;
   color: #EDEDED;
@@ -1155,11 +1193,24 @@ ul {
 /************************************************************/
 .aet-footer {
   height: 15rem;
-  padding: 5rem 0;
+  padding: 3rem 0;
   background-color: #000033;
   color: #FFFFFE;
 }
-.aet-footer-box {
-  -ms-flex-pack: center;
-      justify-content: center;
+.aet-footer a {
+  color: #EDEDED;
+}
+.aet-footer a:hover {
+  text-decoration: underline;
+}
+@media (min-width: 768px) {
+  .aet-footer-box {
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+}
+@media (max-width: 767px) {
+  .aet-footer-box {
+    margin: 1rem 0;
+  }
 }

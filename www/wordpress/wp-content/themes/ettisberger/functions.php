@@ -8,5 +8,6 @@ $customFieldUtil = new CustomFieldUtils();
 add_shortcode('section', array($shortcodeUtil, 'renderSection'));
 add_shortcode('contact', array($shortcodeUtil, 'renderContact'));
 add_shortcode('skills', array($shortcodeUtil, 'renderSkills'));
+add_shortcode('aboutme', array($shortcodeUtil, 'renderAboutMe'));
 
 ?>

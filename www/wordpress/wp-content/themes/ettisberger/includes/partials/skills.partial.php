@@ -4,7 +4,7 @@
             $skill = get_sub_field('skill','option');
             $rating = get_sub_field('rating','option');
         ?>
-            <div class="aet-skill-box aet-column-2 slide-in">
+            <div class="aet-skill-box aet-column-2 aet-column-tablet-4 aet-column-phone-12 slide-in">
                 <div class="aet-skill-box-title">
                     <?php echo $skill; ?>
                 </div>
