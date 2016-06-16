@@ -67,7 +67,7 @@
 
     &-rating {
       display: none;
-      color: $aet-color-dark-blue;
+      color: $aet-color-white;
       @extend %text;
     }
 
@@ -96,12 +96,6 @@
     flex-direction: column;
     background-color: $aet-color-blue;
     color: $aet-color-grey;
-
-    @include aet-gt-phone {
-      &:hover {
-        color: $aet-color-black;
-      }
-    }
 
     &-title {
       @extend %aet-heading-4;
