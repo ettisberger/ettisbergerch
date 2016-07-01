@@ -9,7 +9,11 @@
         ?>
             <div class="aet-contact-box aet-column-3 aet-column-tablet-6 aet-column-phone-12 slide-in">
 
-                <a href="<?php echo $link;?>">
+                <?php if($title == 'mail'){ ?>
+                    <a href="javascript:window.location.href = 'mailto:' + ['andy','ettisberger.ch'].join('@')">
+                <?php } else { ?>
+                    <a href="<?php echo $link;?>">
+                <?php } ?>
                     <div class="aet-contact-box-icon">
                         <i class="fa fa-<?php echo $icon;?>"></i>
                     </div>
