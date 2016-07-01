@@ -19,9 +19,14 @@
       }
     }
 
-    &:hover, &:hover .aet-contact-box-title {
+    &:hover, &:hover .aet-contact-box-title{
       background-color: $aet-color-black;
       color: $aet-color-blue;
+    }
+
+    &:hover .aet-contact-box-icon {
+      transform: scale(0.8);
+      transition: transform 0.2s, opacity 0.2s;
     }
 
     &-title {
